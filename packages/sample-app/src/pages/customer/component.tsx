@@ -12,7 +12,6 @@ export const PageCustomerComponent = (props: any) => {
                 <Breadcrumb.Item>
                     <Link to="/cutomer">Customer</Link>
                 </Breadcrumb.Item>
-                <Breadcrumb.Item>{title}</Breadcrumb.Item>
             </>
         ),
         documentTitle: title,

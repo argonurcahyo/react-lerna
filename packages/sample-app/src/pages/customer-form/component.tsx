@@ -13,9 +13,6 @@ export const PageCustomerForm = (props: any) => {
         breadcrumb: (
             <>
                 <Breadcrumb.Item>
-                    <Link to="/global-setting/dashboard">Global Setting</Link>
-                </Breadcrumb.Item>
-                <Breadcrumb.Item>
                     {title}
                 </Breadcrumb.Item>
             </>
@@ -76,7 +73,7 @@ export const PageCustomerForm = (props: any) => {
                                     {
                                         max: 255,
                                         message: 'max length input 255',
-                                    },
+                                    }
                                 ],
                             })(<Input />)}
                         </Form.Item>
@@ -102,10 +99,6 @@ export const PageCustomerForm = (props: any) => {
                                     {
                                         type: 'email',
                                         message: 'Email tidak valid!',
-                                    },
-                                    {
-                                        message: 'Please input email',
-                                        required: true,
                                     },
                                     {
                                         max: 255,
