@@ -1,0 +1,22 @@
+.sample-empty-tab {
+  margin: 0 auto;
+  height: 160px;
+  width: 100%;
+  position: relative;
+  padding: $spacing-2;
+  .sample-empty-tab__panel {
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .sample-icon-standard {
+    font-size: 24px;
+    margin-bottom: $spacing-1;
+  }
+  h3 {
+    margin: 0;
+  }
+}

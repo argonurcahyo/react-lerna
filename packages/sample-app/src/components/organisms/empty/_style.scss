@@ -1,0 +1,28 @@
+.sample-empty {
+  margin: 0 auto;
+  min-height: calc(100vh - 322px);
+  height: 100%;
+  width: 100%;
+  margin-top: $spacing-3;
+  position: relative;
+  padding: $spacing-2;
+  background: $white;
+  border-radius: 4px;
+  border: $border-base-cms;
+  @include box-shadow;
+  .sample-empty__panel {
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .sample-icon-standard {
+    font-size: 24px;
+    margin-bottom: $spacing-1;
+  }
+  h3 {
+    margin: 0;
+  }
+}

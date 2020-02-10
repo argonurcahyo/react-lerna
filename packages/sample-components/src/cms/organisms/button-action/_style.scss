@@ -1,0 +1,9 @@
+.sample-button-action {
+  @include flex;
+  border-top: $border-base;
+  padding-top: $spacing-3;
+  margin-top: $spacing-3;
+  .sample-button-action__right {
+    margin-left: auto;
+  }
+}

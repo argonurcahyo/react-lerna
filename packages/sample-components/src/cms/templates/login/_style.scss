@@ -1,0 +1,132 @@
+.sample-membership {
+  $spacing: 65%;
+  height: 100vh;
+  background: $white;
+  .sample-membership__image {
+    height: 100%;
+    position: fixed;
+    width: $spacing;
+    background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(8, 0, 0, 0) 30%);
+    background-size: cover;
+    background-position: center center;
+    margin-left: 100% - $spacing;
+    border-left: $border-base;
+  }
+  .sample-membership__logo {
+    height: 100%;
+    position: fixed;
+    width: $spacing;
+    margin-left: 100% - $spacing;
+    border-left: $border-base;
+    img {
+      width: 240px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .sample-membership__form {
+    width: 100% - $spacing;
+    min-height: 100%;
+    overflow: hidden;
+    display: table;
+    small {
+      display: block;
+      text-align: center;
+    }
+    .ant-card {
+      display: table-cell;
+      vertical-align: middle;
+      padding: $spacing-4 $spacing-5;
+    }
+    .ant-card-body {
+      padding: 0;
+    }
+    .ant-input {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 $spacing-2;
+    }
+    .ant-input-affix-wrapper {
+      .ant-input-suffix {
+        right: $spacing-2;
+      }
+      .ant-input:not(:last-child) {
+        padding-right: $spacing-4;
+      }
+    }
+    .ant-btn {
+      height: 50px;
+    }
+    .ant-alert {
+      margin-bottom: $spacing-3;
+    }
+  }
+  .sample-membership__header {
+    margin-bottom: $spacing-4;
+    h3 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    img {
+      width: 80px;
+      margin-bottom: $spacing-4;
+    }
+  }
+  .sample-lined-title {
+    overflow: hidden;
+    text-align: center;
+    margin: $spacing-3 0;
+    &::after {
+      background-color: $slate;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+      left: $spacing-0;
+      margin-right: -50%;
+    }
+    &::before {
+      background-color: $slate;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+      right: $spacing-0;
+      margin-left: -50%;
+    }
+  }
+  @media (max-width: 1199.98px) {
+    .sample-membership__image {
+      margin-left: 50%;
+    }
+    .sample-membership__form {
+      width: 50%;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .sample-membership__image {
+      display: none;
+      border-left: 0;
+    }
+    .sample-membership__header h3 {
+      font-size: 24px;
+    }
+    .sample-membership__form {
+      width: 100%;
+      .ant-card {
+        padding-left: $spacing-2;
+        padding-right: $spacing-2;
+        .ant-card-body {
+          max-width: 640px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

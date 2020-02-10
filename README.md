@@ -24,7 +24,7 @@ Lerna: `3.16.4`
 
 ### Run specific packages
 
-`lerna run dev --scope=@react-lerna/tok`
+`lerna run dev --scope=@sample/sample-app`
 
 ### Run all tests
 

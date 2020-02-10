@@ -1,0 +1,35 @@
+{
+    "name": "root",
+    "private": true,
+    "devDependencies": {
+        "lerna": "^3.16.4"
+    },
+    "author": "YDERANA",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "scripts": {
+        "prepare": "npm run compile-ts --prefix packages/sample-components",
+        "test": "CI=true npm test --prefix packages/sample-components",
+        "format": "prettier --print-width 80 --tab-width 4 --single-quote --write 'packages/*/src/**/{*.js,*.ts*}'"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "prettier": {
+        "printWidth": 100,
+        "tabWidth": 2,
+        "useTabs": false,
+        "trailingComma": "all"
+    },
+    "version": "1.0.0",
+    "dependencies": {
+        "@types/react-html-parser": "^2.0.1",
+        "formik": "^1.5.8",
+        "jsona": "^1.5.0",
+        "moment": "^2.24.0",
+        "react-html-parser": "^2.0.2",
+        "throttle-debounce": "^2.1.0"
+    }
+}

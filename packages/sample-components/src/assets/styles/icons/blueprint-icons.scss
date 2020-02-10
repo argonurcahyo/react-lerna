@@ -1,0 +1,51 @@
+/*!
+
+Copyright 2017-present Palantir Technologies, Inc. All rights reserved.
+Licensed under the terms of the LICENSE file distributed with this project.
+
+*/
+
+$icons16-family: "Icons16" !default;
+$icons20-family: "Icons20" !default;
+$pt-icon-size-standard: 16px !default;
+$pt-icon-size-large: 20px !default;
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@import "font-imports";
+@import "icons";
+
+#{$icon-classes} {
+  display: inline-block;
+}
+
+span.#{$ns}-icon-standard {
+  @include pt-icon($pt-icon-size-standard);
+}
+
+span.#{$ns}-icon-large {
+  @include pt-icon($pt-icon-size-large);
+}
+span.#{$ns}-icon {
+  line-height: 1;
+  font-family: $icons20-family;
+  font-size: inherit;
+  font-weight: 400;
+  font-style: normal;
+
+  &::before {
+    @include pt-icon-font-smoothing();
+  }
+}
+
+@each $name, $content in $icons {
+  .#{$ns}-icon-#{$name}::before {
+    content: $content;
+  }
+}

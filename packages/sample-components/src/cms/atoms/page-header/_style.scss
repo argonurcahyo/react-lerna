@@ -1,0 +1,12 @@
+.sample-page-header {
+  position: relative;
+  .sample-page-header__title {
+    font-size: 28px;
+    margin-bottom: 0;
+    font-weight: 700;
+    word-break: break-all;
+  }
+  + .ant-breadcrumb {
+    margin-bottom: $spacing-4;
+  }
+}
